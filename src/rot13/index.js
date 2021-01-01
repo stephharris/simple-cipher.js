@@ -24,8 +24,6 @@ const decrypt = (phrase) => {
   return decryptedPhrase;
 }
 
-const encrypt = (phrase) => {
-  console.log('phrase', phrase)
-}
+const encrypt = decrypt;
 
 export default { decrypt, encrypt };

@@ -1,5 +1,3 @@
-const cipher = require('../src/index.js');
+const cipher = require('simple-cipher-js');
 
-console.log('decrypt', new cipher.rot13.encrypt('hi'))
-
-console.log(rot13('uryyb jbeyq'));
+console.log('####', cipher.rot13.encrypt('uryyb jbeyq'))
