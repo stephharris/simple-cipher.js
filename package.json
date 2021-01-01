@@ -1,0 +1,43 @@
+{
+  "name": "simple-cipher",
+  "version": "0.0.1",
+  "description": "A simple cryptography library for NodeJS.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack --mode production",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephharris/simple-cipher.js.git"
+  },
+  "keywords": [
+    "cipher",
+    "simple",
+    "cryptography",
+    "caesar",
+    "substitution",
+    "decrypt",
+    "encrypt",
+    "rot13",
+    "vigenere"
+  ],
+  "author": "Steph Harris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephharris/simple-cipher.js/issues"
+  },
+  "homepage": "https://github.com/stephharris/simple-cipher.js#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2017": "^6.24.1"
+  },
+  "dependencies": {
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1"
+  }
+}
