@@ -1,7 +1,9 @@
 'use strict';
 
-import rot13 from './rot13/index.js';
+import rot13 from './rot13/';
+import caesar from './caesar/';
 
 module.exports = {
-  rot13
+  rot13,
+  caesar
 }

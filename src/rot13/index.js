@@ -1,20 +1,18 @@
 'use strict'
 
-import { ALPHABET, ROT13_ALPHABET } from '../utils/';
+import { ALPHABET, ROT13_ALPHABET, isNumber, isSpecialChar } from '../utils/';
 
 const decrypt = (phrase) => {
 
   let decryptedPhrase = '';
 
-  phrase.split('').forEach((letter) => {
+  phrase.toLowerCase().split('').forEach((letter) => {
   	const index = ALPHABET.indexOf(letter);
 
   	if(index > -1) {
   		decryptedPhrase += ROT13_ALPHABET[index]
-  	} else if(letter === ' ') {
-  		decryptedPhrase += ' ';
-  	} else if(typeof Number(letter) === number) {
-  		decryptedPhrase += 'letter'
+  	} else if(letter === ' ' || isNumber(letter) || isSpecialChar(letter)) {
+      decryptedPhrase += letter;
   	} else {
   		throw 'Phrase is indecipherable as a ROT13.'
   	}
@@ -24,6 +22,8 @@ const decrypt = (phrase) => {
   return decryptedPhrase;
 }
 
+// because rot13's rotational value is 13 & the english alphabet contains 26 letters (26/2 = 13)
+// => encrypt will equal decrypt
 const encrypt = decrypt;
 
 export default { decrypt, encrypt };
