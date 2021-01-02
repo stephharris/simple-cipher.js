@@ -1,11 +1,16 @@
 'use strict';
 
-var _index = require('./rot13/index.js');
+var _rot = require('./rot13/');
 
-var _index2 = _interopRequireDefault(_index);
+var _rot2 = _interopRequireDefault(_rot);
+
+var _caesar = require('./caesar/');
+
+var _caesar2 = _interopRequireDefault(_caesar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = {
-  rot13: _index2.default
+  rot13: _rot2.default,
+  caesar: _caesar2.default
 };

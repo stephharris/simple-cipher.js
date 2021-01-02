@@ -23,7 +23,7 @@ const encrypt = (phrase, shift) => {
     let shiftedIndex = index + shift;
 
     if(shiftedIndex > (ALPHABET.length - 1)) {
-      shiftedIndex = shift % ALPHABET.length;
+      shiftedIndex = shiftedIndex % ALPHABET.length;
     }
 
     if(shiftedIndex < 0) {
