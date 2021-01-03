@@ -7,3 +7,6 @@ babel.config.js
 test-project/
 src/index.test.js
 src/
+tsconfig.json
+tslint.json
+.prettierrc

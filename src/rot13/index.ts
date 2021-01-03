@@ -2,7 +2,7 @@
 
 import { ALPHABET, ROT13_ALPHABET, isNumber, isSpecialChar } from '../utils/';
 
-const decrypt = (phrase) => {
+const decrypt = (phrase: string) => {
 
   let decryptedPhrase = '';
 

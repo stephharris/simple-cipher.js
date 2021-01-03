@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: './src/index.js',
+  entry: './src/index.ts',
   output: {
     globalObject: 'this',
     path: path.resolve(__dirname, 'dist'),
@@ -13,13 +13,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js?$/,
+        test: /\.ts$/,
         exclude: /(node_modules)/,
-        use: 'babel-loader',
+        use: 'ts-loader',
       },
     ],
   },
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.js', '.ts'],
   },
 };
