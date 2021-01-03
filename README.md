@@ -17,7 +17,7 @@ $ yarn add simple-cipher-js
 or add it directly to your webpage using a CDN:
 ```html
 <head>
-	<script src="https://cdn.jsdelivr.net/npm/simple-cipher-js@0.0.3/dist/index.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/simple-cipher-js@0.0.4/dist/index.min.js"></script>
 </head>
 ```
 
@@ -50,7 +50,7 @@ Using the CDN:
 	
 <html> 
 	<head>
-		<script src="https://cdn.jsdelivr.net/npm/simple-cipher-js@0.0.3/dist/index.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/simple-cipher-js@0.0.4/dist/index.min.js"></script>
 	</head>
 </head>
 

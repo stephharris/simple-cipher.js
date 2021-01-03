@@ -1,16 +1,1 @@
-'use strict';
-
-var _rot = require('./rot13/');
-
-var _rot2 = _interopRequireDefault(_rot);
-
-var _caesar = require('./caesar/');
-
-var _caesar2 = _interopRequireDefault(_caesar);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-module.exports = {
-  rot13: _rot2.default,
-  caesar: _caesar2.default
-};
+!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.cipher=t():e.cipher=t()}(this,(function(){return(()=>{"use strict";var e={380:(e,t,r)=>{r.r(t),r.d(t,{caesar:()=>s,rot13:()=>p});const o=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"],n=["n","o","p","q","r","s","t","u","v","w","x","y","z","a","b","c","d","e","f","g","h","i","j","k","l","m"],i=e=>Boolean(Number(e)),c=e=>e.match(/[^\w\s]/),l=e=>{let t="";return e.toLowerCase().split("").forEach((e=>{const r=o.indexOf(e);if(r>-1)t+=n[r];else{if(" "!==e&&!i(e)&&!c(e))throw"Phrase is indecipherable as a ROT13.";t+=e}})),t},p={decrypt:l,encrypt:l},s={encrypt:(e,t)=>{if(13===t)return p.encrypt(e);let r="";return e.toLowerCase().split("").forEach((e=>{const n=o.indexOf(e);if(" "===e||i(e)||c(e))return void(r+=e);let l=n+t;l>o.length-1&&(l%=o.length),l<0&&(l=o.length-Math.abs(t%o.length)),r+=o[l]})),r},decrypt:(e,t)=>{if(13===t)return p.decrypt(e);let r="";return e.toLowerCase().split("").forEach((e=>{const n=o.indexOf(e);if(" "===e||i(e)||c(e))return void(r+=e);let l=n-t;l>o.length-1&&(l%=o.length),l<0&&(l=o.length-Math.abs(l%o.length)),r+=o[l]})),r}}}},t={};function r(o){if(t[o])return t[o].exports;var n=t[o]={exports:{}};return e[o](n,n.exports,r),n.exports}return r.d=(e,t)=>{for(var o in t)r.o(t,o)&&!r.o(e,o)&&Object.defineProperty(e,o,{enumerable:!0,get:t[o]})},r.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),r.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r(380)})()}));

@@ -11,7 +11,7 @@ const isSpecialChar = (text) => {
   return text.match(regex)
 }
 
-module.exports = {
+export {
   ALPHABET,
   ROT13_ALPHABET,
   isNumber,
