@@ -4,7 +4,7 @@ import { ALPHABET, isNumber, isSpecialChar } from '../utils/';
 import rot13 from '../rot13/';
 
 
-const encrypt = (phrase, shift) => {
+const encrypt = (phrase: string, shift: number) => {
 
   if(shift === 13) {
     return rot13.encrypt(phrase);
@@ -38,7 +38,7 @@ const encrypt = (phrase, shift) => {
 }
 
 
-const decrypt = (phrase, shift) => {
+const decrypt = (phrase: string, shift: number) => {
 
   if(shift === 13) {
     return rot13.decrypt(phrase);
@@ -72,6 +72,4 @@ const decrypt = (phrase, shift) => {
   return decryptedPhrase;
 }
 
-
-
-export default { encrypt, decrypt };
+export default { decrypt, encrypt };
