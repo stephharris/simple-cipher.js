@@ -54,7 +54,7 @@ const decrypt = (phrase: string, shift: number) => {
       return;
     }
 
-    let shiftedIndex = index - shift;
+    let shiftedIndex = index - Math.abs(shift);
 
     if(shiftedIndex > (ALPHABET.length - 1)) {
 
